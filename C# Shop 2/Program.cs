@@ -53,7 +53,7 @@ Console.WriteLine(acquaLeteBigBottle.getCode());
 //la bottiglia nasce chiusa
     //chiedo se la bottiglia è aperta
 Console.WriteLine("Is the bottle open?");
-Console.WriteLine(acquaLeteBigBottle.isBottleOpen());
+Console.WriteLine(acquaLeteBigBottle.GetBottleState());
 
         //apro la bottiglia
 Console.WriteLine("Open the bottle");
@@ -61,7 +61,7 @@ acquaLeteBigBottle.openBottle();
 
         //chiedo se la bottiglia è aperta
 Console.WriteLine("Is the bottle open?");
-Console.WriteLine(acquaLeteBigBottle.isBottleOpen());
+Console.WriteLine(acquaLeteBigBottle.GetBottleState());
 
         //apro la bottiglia
 Console.WriteLine("Open the bottle");
@@ -69,11 +69,11 @@ acquaLeteBigBottle.openBottle();
 
         //chiedo se la bottiglia è aperta
 Console.WriteLine("Is the bottle open?");
-Console.WriteLine(acquaLeteBigBottle.isBottleOpen());
+Console.WriteLine(acquaLeteBigBottle.GetBottleState());
 
 //chiudo la bottiglia
 Console.WriteLine("Close the bottle");
 acquaLeteBigBottle.closeBottle();
     //chiedo se la bottiglia è aperta
 Console.WriteLine("Is the bottle open?");
-Console.WriteLine(acquaLeteBigBottle.isBottleOpen());
+Console.WriteLine(acquaLeteBigBottle.GetBottleState());

@@ -61,6 +61,20 @@ namespace C__Shop_2
         {
             return this.open;
         }
+        public string GetBottleState()
+        {
+            string bottleState = "";
+            if (open) 
+            {
+                bottleState = "The bottle is open.";
+            }
+            else
+            {
+                bottleState = "The bottle is closed";
+            }
+
+            return bottleState;
+        }
 
 
 
@@ -70,8 +84,58 @@ namespace C__Shop_2
             string info = base.GetProductInfo();
             info += $"Bottle Size: {bottleCapacity} L \n";
             return info;
+        }
 
+        public void refillBottle(float amountToRefill)
+        {
+            if (remainingWater == bottleCapacity)
+            {
+                Console.WriteLine("The bottle is already full"); 
+            }
+            else if (open)//REFILL ONLY IF OPEN
+                {
+                    if (amountToRefill > 0)
+                    {
+                        if (remainingWater + amountToRefill > bottleCapacity)
+                        {
+                            Console.WriteLine("You used too much water, but your bottle is full");
+                            remainingWater = bottleCapacity;
+                        }else
+                            {
+                            remainingWater += amountToRefill;
+                            }
+                       
+                    }else { Console.WriteLine("Not much sense, can try .emptyBottle or .removeWaterFromBottle instead"); }
 
+            }else { Console.WriteLine("Should open the bottle first"); }
+        }
+            
+
+        public void removeWaterFromBottle(float amountToRemove)
+        {
+            if (remainingWater == 0)
+            {
+                Console.WriteLine("The bottle is already empty");
+            }
+            else if (open)//REFILL ONLY IF OPEN
+            {
+                if (amountToRemove > 0)
+                {
+                    if (remainingWater + amountToRefill > bottleCapacity)
+                    {
+                        Console.WriteLine("You used too much water, but your bottle is full");
+                        remainingWater = bottleCapacity;
+                    }
+                    else
+                    {
+                        remainingWater += amountToRefill;
+                    }
+
+                }
+                else { Console.WriteLine("Not much sense, can try .emptyBottle or .removeWaterFromBottle instead"); }
+
+            }
+            else { Console.WriteLine("Should open the bottle first"); }
         }
     }
 }
