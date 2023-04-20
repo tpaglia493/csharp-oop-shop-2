@@ -34,6 +34,8 @@ test1.AddSingleProductToProducts(acquaLeteBigBottle);
 //CONCATENATE LIST TO SHOP LIST
         //.ConcatListToProducts(inventory);
 
+
+//MAIN PROGRAM (TESTS)
 foreach (Product anyProduct  in test1.products)
 {
 
@@ -42,3 +44,11 @@ foreach (Product anyProduct  in test1.products)
     Console.WriteLine(info);
 }
 
+Console.WriteLine(acquaLeteBigBottle.GetInfo());
+Console.WriteLine(acquaLeteBigBottle.GetCategory().GetCategoryInfo());
+Console.WriteLine(acquaLeteBigBottle.GetIvaPrice());
+acquaLeteBigBottle.Name = "New Name Acqua Lete";
+Console.WriteLine(acquaLeteBigBottle.GetInfo());
+Console.WriteLine(acquaLeteBigBottle.Name);
+Console.WriteLine(acquaLeteBigBottle.Price);
+Console.WriteLine(acquaLeteBigBottle.getCode());
