@@ -51,23 +51,59 @@ Console.WriteLine(acquaLeteBigBottle.Price);
 Console.WriteLine(acquaLeteBigBottle.getCode());
 
 //la bottiglia nasce chiusa
-    //chiedo se la bottiglia è aperta
+
+//provo a riempire la bottiglia
+Console.WriteLine("Refill the bottle");
+acquaLeteBigBottle.refillBottle(1.5f);
+
+
+//chiedo se la bottiglia è aperta
 Console.WriteLine("Is the bottle open?");
 Console.WriteLine(acquaLeteBigBottle.GetBottleState());
 
-        //apro la bottiglia
+//apro la bottiglia
 Console.WriteLine("Open the bottle");
 acquaLeteBigBottle.openBottle();
 
-        //chiedo se la bottiglia è aperta
+//tolgo un po' d'acqua
+Console.WriteLine("Remove some water");
+acquaLeteBigBottle.removeWaterFromBottle(1.0f);
+
+//chiudo la bottiglia
+Console.WriteLine("Close the bottle");
+acquaLeteBigBottle.closeBottle();
+
+//chiedo quanta acqua rimane
+Console.WriteLine($"There are now {acquaLeteBigBottle.RemainingWater} L of water in the bottle");
+
+//chiedo se la bottiglia è aperta
 Console.WriteLine("Is the bottle open?");
 Console.WriteLine(acquaLeteBigBottle.GetBottleState());
 
-        //apro la bottiglia
+//provo a riempire la bottiglia
+Console.WriteLine("Refill the bottle");
+acquaLeteBigBottle.refillBottle(1.5f);
+
+//chiedo quanta acqua rimane
+Console.WriteLine($"There are now {acquaLeteBigBottle.RemainingWater} L of water in the bottle");
+
+//apro la bottiglia
 Console.WriteLine("Open the bottle");
 acquaLeteBigBottle.openBottle();
 
-        //chiedo se la bottiglia è aperta
+//apro la bottiglia
+Console.WriteLine("Open the bottle");
+acquaLeteBigBottle.openBottle();
+
+//provo a riempire la bottiglia
+Console.WriteLine("Refill the bottle");
+acquaLeteBigBottle.refillBottle(1.5f);
+
+//chiedo quanta acqua rimane
+Console.WriteLine($"There are now {acquaLeteBigBottle.RemainingWater} L of water in the bottle");
+
+
+//chiedo se la bottiglia è aperta
 Console.WriteLine("Is the bottle open?");
 Console.WriteLine(acquaLeteBigBottle.GetBottleState());
 

@@ -29,6 +29,10 @@ namespace C__Shop_2
         //STATES
         private bool open;
         private float remainingWater;
+        public float RemainingWater
+        {
+            get { return this.remainingWater; }
+        }
 
         //SETTERS 
         public void openBottle()
@@ -117,23 +121,31 @@ namespace C__Shop_2
             {
                 Console.WriteLine("The bottle is already empty");
             }
-            else if (open)//REFILL ONLY IF OPEN
+            else if (open)//REMOVE ONLY IF OPEN
             {
                 if (amountToRemove > 0)
                 {
-                    if (remainingWater + amountToRefill > bottleCapacity)
+                    if (remainingWater - amountToRemove < 0)
                     {
-                        Console.WriteLine("You used too much water, but your bottle is full");
-                        remainingWater = bottleCapacity;
+                        Console.WriteLine("There wasn't that much water, but your bottle is empty anyway");
+                        remainingWater = 0;
                     }
                     else
                     {
-                        remainingWater += amountToRefill;
+                        remainingWater -= amountToRemove;
                     }
 
                 }
-                else { Console.WriteLine("Not much sense, can try .emptyBottle or .removeWaterFromBottle instead"); }
+                else { Console.WriteLine("Not much sense, can try .refillBottle instead"); }
 
+            }
+            else { Console.WriteLine("Should open the bottle first"); }
+        }
+        public void emptyBottle()
+        {
+            if (open)
+            {
+                remainingWater = 0;
             }
             else { Console.WriteLine("Should open the bottle first"); }
         }
