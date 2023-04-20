@@ -49,3 +49,31 @@ Console.WriteLine(acquaLeteBigBottle.GetProductInfo());
 Console.WriteLine(acquaLeteBigBottle.Name);
 Console.WriteLine(acquaLeteBigBottle.Price);
 Console.WriteLine(acquaLeteBigBottle.getCode());
+
+//la bottiglia nasce chiusa
+    //chiedo se la bottiglia è aperta
+Console.WriteLine("Is the bottle open?");
+Console.WriteLine(acquaLeteBigBottle.isBottleOpen());
+
+        //apro la bottiglia
+Console.WriteLine("Open the bottle");
+acquaLeteBigBottle.openBottle();
+
+        //chiedo se la bottiglia è aperta
+Console.WriteLine("Is the bottle open?");
+Console.WriteLine(acquaLeteBigBottle.isBottleOpen());
+
+        //apro la bottiglia
+Console.WriteLine("Open the bottle");
+acquaLeteBigBottle.openBottle();
+
+        //chiedo se la bottiglia è aperta
+Console.WriteLine("Is the bottle open?");
+Console.WriteLine(acquaLeteBigBottle.isBottleOpen());
+
+//chiudo la bottiglia
+Console.WriteLine("Close the bottle");
+acquaLeteBigBottle.closeBottle();
+    //chiedo se la bottiglia è aperta
+Console.WriteLine("Is the bottle open?");
+Console.WriteLine(acquaLeteBigBottle.isBottleOpen());

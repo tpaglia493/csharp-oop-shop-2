@@ -21,10 +21,47 @@ namespace C__Shop_2
             this.waterSource = waterSource;
             this.pH = pH;   
             this.bottleCapacity = bottleCapacity;
+            this.remainingWater = bottleCapacity;
+            this.open = false;
 
         }
 
+        //STATES
+        private bool open;
+        private float remainingWater;
+
         //SETTERS 
+        public void openBottle()
+        {
+            if (open) 
+            {
+                Console.WriteLine("The bottle is already open");
+            } 
+            else 
+            { 
+            this.open = true; 
+            }
+
+        }
+
+        public void closeBottle()
+        {
+            if (!open)
+            {
+                Console.WriteLine("The bottle is already closed");
+            }
+            else
+            {
+                this.open = false;
+            }
+        }
+
+        //GETTERS
+        public bool isBottleOpen()
+        {
+            return this.open;
+        }
+
 
 
         //METHODS
