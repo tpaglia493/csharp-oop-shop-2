@@ -14,14 +14,7 @@ Category beverage = new Category("Beverage", "something you drink");
         //Product product4 = new Product("Expensive dress", "It's an expensive dress", 900.00f, 22.00f, dress);
 
 //SPECIFIC PRODUCTS
-BottleOfWater acquaLeteBigBottle = new BottleOfWater("Acqua Lete 1.5 Litres ", "Just a bit of sodium", 1.00f, 17.00f, beverage, 1.5f, 7.2f,"A source" );
-
-//SHOPS
-Shop test1 = new Shop("fake name", "fake city", "fake street", 1234);
-
-//ADDING SINGLE PRODUCT TO LIST OF PRODUCTS OF SHOP NAMED test1
-test1.AddSingleProductToProducts(acquaLeteBigBottle);
-
+BottleOfWater acquaLeteBigBottle = new BottleOfWater("Acqua Lete", "Just a bit of sodium", 1.00f, 17.00f, beverage, 1.5f, 7.2f,"A source" );
 
 //CREATING LIST OF PRODUCTS (INVENTORIES)
         //List<Product> inventoryBeverages = new List<Product>();
@@ -29,7 +22,11 @@ test1.AddSingleProductToProducts(acquaLeteBigBottle);
         //List<Product> inventoryTools = new List<Product>();
         //List<Product> inventoryFurnitures = new List<Product>();
 
+//SHOPS
+Shop test1 = new Shop("fake name", "fake city", "fake street", 1234);
 
+//ADDING SINGLE PRODUCT TO LIST OF PRODUCTS OF SHOP NAMED test1
+test1.AddSingleProductToProducts(acquaLeteBigBottle);
 
 //CONCATENATE LIST TO SHOP LIST
         //.ConcatListToProducts(inventory);
@@ -40,15 +37,15 @@ foreach (Product anyProduct  in test1.products)
 {
 
     string info = anyProduct.GetCategory().GetCategoryInfo();
-    info += anyProduct.GetInfo();
+    info += anyProduct.GetProductInfo();
     Console.WriteLine(info);
 }
 
-Console.WriteLine(acquaLeteBigBottle.GetInfo());
+Console.WriteLine(acquaLeteBigBottle.GetProductInfo());
 Console.WriteLine(acquaLeteBigBottle.GetCategory().GetCategoryInfo());
 Console.WriteLine(acquaLeteBigBottle.GetIvaPrice());
 acquaLeteBigBottle.Name = "New Name Acqua Lete";
-Console.WriteLine(acquaLeteBigBottle.GetInfo());
+Console.WriteLine(acquaLeteBigBottle.GetProductInfo());
 Console.WriteLine(acquaLeteBigBottle.Name);
 Console.WriteLine(acquaLeteBigBottle.Price);
 Console.WriteLine(acquaLeteBigBottle.getCode());

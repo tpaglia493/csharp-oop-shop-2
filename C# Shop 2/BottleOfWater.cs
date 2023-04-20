@@ -16,12 +16,25 @@ namespace C__Shop_2
 
         //CONSTRUCTOR
         public BottleOfWater( string commercialName, string description, float price, float iva, Category categoryName, float bottleCapacity, float pH, string waterSource) 
-            :base(commercialName,  description,  price,  iva,  categoryName)
+                         :base(commercialName,  description,  price,  iva,  categoryName)
         {
             this.waterSource = waterSource;
             this.pH = pH;   
             this.bottleCapacity = bottleCapacity;
 
-        } 
+        }
+
+        //SETTERS 
+
+
+        //METHODS
+        public override string GetProductInfo()
+        {
+            string info = base.GetProductInfo();
+            info += $"Bottle Size: {bottleCapacity} L \n";
+            return info;
+
+
+        }
     }
 }

@@ -64,8 +64,8 @@ namespace C__Shop_2
             Random number = new Random();
             this.code = number.Next(1, 99999999);
         }
-       
-        public string GetInfo()
+
+        public virtual string  GetProductInfo()
         {
             float ivaPrice = GetIvaPrice();
             string ivaPriceString = ivaPrice.ToString("N2");
