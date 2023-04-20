@@ -14,7 +14,7 @@ Category beverage = new Category("Beverage", "something you drink");
         //Product product4 = new Product("Expensive dress", "It's an expensive dress", 900.00f, 22.00f, dress);
 
 //SPECIFIC PRODUCTS
-BottleOfWater acquaLeteBigBottle = new BottleOfWater("Acqua Lete", "Just a bit of sodium", 1.00f, 17.00f, beverage, 1.5f, 7.2f,"A source" );
+BottleOfWater acquaLeteBigBottle = new BottleOfWater("Acqua Lete", "Just a bit of sodium", 1.00f, 17.00f, beverage, 1.0f, 7.2f,"A source" );
 
 //CREATING LIST OF PRODUCTS (INVENTORIES)
         //List<Product> inventoryBeverages = new List<Product>();

@@ -19,8 +19,8 @@ namespace C__Shop_2
                          :base(commercialName,  description,  price,  iva,  categoryName)
         {
             this.waterSource = waterSource;
-            this.pH = pH;   
-            this.bottleCapacity = bottleCapacity;
+            this.pH = pH;
+            SetBottleCapacity(bottleCapacity);
             this.remainingWater = bottleCapacity;
             this.open = false;
 
@@ -35,6 +35,14 @@ namespace C__Shop_2
         }
 
         //SETTERS 
+        public void  SetBottleCapacity( float bottleCapacity )
+        {
+            if ( bottleCapacity < 0 || bottleCapacity>1.5)
+            {
+                this.bottleCapacity = 1.5f;
+            }
+            else { this.bottleCapacity = bottleCapacity; }
+        }
         public void openBottle()
         {
             if (open) 
