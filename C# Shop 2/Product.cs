@@ -24,6 +24,8 @@ namespace C__Shop_2
 
         public float Iva { get { return this.iva; } set { this.iva = value; } }
 
+
+
         private Category category;
 
         
@@ -39,6 +41,13 @@ namespace C__Shop_2
             this.description = description;
             this.price = price;
             this.iva = iva;
+            this.category = categoryName;
+        }
+        public Product(string commercialName, string description,Category categoryName)
+        {
+            this.commercialName = commercialName;
+            CodeGenerator();
+            this.description = description;
             this.category = categoryName;
         }
 
